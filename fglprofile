@@ -1,0 +1,5 @@
+dbi.database.mylib.driver = "dbmpgs"                       # Use ODI driver for PostgreSQL client
+dbi.database.mylib.source = "library@localhost:5432"       # PostgreSQL database source info
+#dbi.database.mylib.username = "postgres"                   # PostgreSQL user login (for dev only!)
+#dbi.database.mylib.password = "........"                   # PostgreSQL user password (for dev only!)
+

@@ -1,0 +1,9 @@
+author^auth_id^262^4^1^
+author^a_name^201^50^2^
+book^book_id^262^4^1^
+book^b_title^457^100^2^
+book^b_author^258^4^3^
+book^b_isbn^457^20^4^
+book^b_pub_date^7^4^5^
+book^b_price^5^2562^6^
+book^b_plot^201^500^7^
