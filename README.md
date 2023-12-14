@@ -1,5 +1,9 @@
 # Book database sample
 
+## Description
+
+This demo shows how easy it is to program with Genero.
+
 ## Prerequisites
 
 * Genero BDL 4.01+
