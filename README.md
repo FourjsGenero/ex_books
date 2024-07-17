@@ -6,7 +6,7 @@ This demo shows how easy it is to program with Genero.
 
 ## Prerequisites
 
-* Genero BDL 4.01+
+* Latest Genero version
 * Database server: PostgreSQL 14+
 
 ## Quick start
