@@ -47,6 +47,26 @@ MAIN
                 END TRY
             END IF
 
+        ON UPDATE
+            LET brec = books[ arr_curr() ]
+            INPUT brec.* FROM sr1[ scr_line() ].*
+                  ATTRIBUTES(WITHOUT DEFAULTS);
+            IF NOT int_flag THEN
+                TRY
+                    UPDATE book
+                       SET b_title    = brec.b_title,
+                           b_author   = brec.b_author,
+                           b_isbn     = brec.b_isbn,
+                           b_pub_date = brec.b_pub_date,
+                           b_price    = brec.b_price
+                     WHERE book_id = brec.book_id
+                    LET books[ arr_curr() ] = brec
+                    MESSAGE SFMT("Book record updated (id=%1)", brec.book_id)
+                CATCH
+                    ERROR "Could not update book row in database:", SQLERRMESSAGE
+                END TRY
+            END IF
+
         ON DELETE
             IF mbox_yn("Delete the current row?") THEN
                 TRY
